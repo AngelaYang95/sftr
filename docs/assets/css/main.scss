@@ -1,12 +1,14 @@
+@import './media.scss';
 // TODO: add mobile first styling
 
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
 $bodyFont: -apple-system,"Segoe UI",Roboto,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-$headerColor: #0B3E89;
+$headerColor: #0a0a0a;
 $headerFont: Helvetica, Montserrat;
-$linkColor: #0484BB;
+$linkColor: #b20ce7;
 $bodyColor: #292929;
+$borderColor: black;
 $sectionWidth: 860px;
 $navHeight: 66px;
 
@@ -29,10 +31,6 @@ h1, h2, h3 {
 	text-transform: uppercase;
 }
 
-p a {
-	color: $linkColor;
-}
-
 p {
 	font-size: 18px;
   line-height: 1.75;
@@ -43,12 +41,17 @@ a {
 	text-decoration: none;
 }
 
+p a {
+	color: $linkColor;
+}
+
 a:hover, footer a:hover {
 	color: #CBBDDD;
 }
 
 section {
-	margin: 96px auto;
+	margin: 48px auto;
+	padding: 48px 0;
 }
 
 section.hero {
@@ -58,34 +61,53 @@ section.hero {
 }
 
 footer {
+	border-top: 1px solid $bodyColor;
 	background-color: $backgroundColor;
 	color: $headerColor;
+	display: flex;
 }
 
 // Custom class styles
-.nav-bar {
-	min-height: 48px;
-}
-
-.nav-items {
+nav-bar {
+  align-items: center;
 	background: $backgroundColor;
+	border-bottom: 1px solid black;
 	color: $headerColor;
+	display: flex;
 	font-family: $headerFont;
 	left: 0;
-	margin: 0;
-	padding: 24px 0;
+	min-height: $navHeight;
+  padding: 0 24px;
 	position: fixed;
 	right: 0;
 	top: 0;
-	text-align: center;
-	text-transform: uppercase;
+	transition: top 0.4s ease-out;
 	z-index: 2;
+}
+
+nav-bar[hide] {
+	top: -$navHeight;
+}
+
+.nav-items {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.top-nav {
+	font-weight: 800;
 }
 
 .nav-items li {
 	list-style: none;
 	margin: 0 8px;
 	display: inline;
+}
+
+.logo {
+	margin-left: auto;
 }
 
 .hero {
@@ -107,7 +129,7 @@ footer {
 .main-content {
 	margin: auto;
 	max-width: 960px;
-	padding: 0 12px;
+	padding: 0 36px;
 }
 
 .col-wrapper {
@@ -124,10 +146,22 @@ footer {
 	width: 33.33%;
 }
 
+table.schedule {
+	border-collapse: collapse;
+	margin: 24px 0;
+	width: 100%;
+}
+
+.session {
+  border-top: 1px solid $bodyColor;
+  border-bottom: 1px solid $bodyColor;
+}
+
 .quote {
 	font-family: $headerFont;
 	font-size: 56px;
-	padding: 96px 48px;
+	font-weight: 700;
+	padding: 96px 12px;
 	text-decoration: none;
 }
 
@@ -140,8 +174,7 @@ footer {
 }
 
 p.caption {
-	margin-top: 4px;
-	font-size: 14px;
+	text-align: center;
 }
 
 .expand {
@@ -160,6 +193,22 @@ p.caption {
 
 .email {
 	font-size: 54px;
+}
+
+@include media("<tablet") {
+	.col-wrapper {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.col-two {
+		width: 100%;
+	}
+
+	.quote {
+		font-size: 32px;
+		padding: 48px 0;
+	}
 }
 
 // Animations
