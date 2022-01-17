@@ -21,6 +21,7 @@ body {
 
 h1 {
 	font-size: 48px;
+	margin-bottom: 24px;
 }
 
 h1, h2, h3 {
@@ -78,7 +79,6 @@ footer {
 nav-bar {
 	font-family: $headerFont;
 	transition: top 0.4s ease-out;
-	z-index: 2;
 }
 
 .nav-items {
@@ -96,6 +96,10 @@ nav-bar {
 	list-style: none;
 	margin: 0 8px;
 	display: inline;
+}
+
+.nav-items a[active] {
+	text-decoration: underline;
 }
 
 .hero {
@@ -193,19 +197,18 @@ p.caption {
 	white-space: nowrap;
 }
 
-.block-header {
-	padding-right: 24px;
-	padding-bottom: 24px;
-}
-
 @include media("<tablet") {
+	h1 {
+		font-size: 18px;
+	}
+
 	.nav-items li {
 		display: block;
 	}
 
 	section {
 		margin: 24px auto;
-		padding: 24px 0;
+		padding: 24px 12px;
 	}
 
 	.hero {
@@ -218,7 +221,12 @@ p.caption {
 	}
 
 	.col-two {
+		margin: 0;
 		width: unset;
+	}
+
+	.col-four {
+		width: 100%;
 	}
 
 	.quote {
@@ -227,6 +235,7 @@ p.caption {
 
 	footer {
 		flex-direction: column;
+		padding: 24px 0;
 	}
 
 	.signature {
