@@ -197,6 +197,13 @@ p.caption {
 	white-space: nowrap;
 }
 
+footer.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 @include media("<tablet") {
 	h1 {
 		font-size: 18px;
