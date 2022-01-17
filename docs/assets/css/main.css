@@ -28,7 +28,7 @@ a {
 }
 
 p a {
-  color: #b20ce7;
+  color: #63b8da;
 }
 
 a:hover, footer a:hover {
@@ -61,23 +61,9 @@ footer {
 }
 
 nav-bar {
-  align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid black;
-  color: #0a0a0a;
-  display: flex;
   font-family: Helvetica, Montserrat;
-  left: 0;
-  padding: 32px 24px;
-  position: fixed;
-  right: 0;
-  top: 0;
   transition: top 0.4s ease-out;
   z-index: 2;
-}
-
-nav-bar[hide] {
-  top: -100px;
 }
 
 .nav-items {
@@ -95,10 +81,6 @@ nav-bar[hide] {
   list-style: none;
   margin: 0 8px;
   display: inline;
-}
-
-.logo {
-  margin-left: auto;
 }
 
 .hero {
