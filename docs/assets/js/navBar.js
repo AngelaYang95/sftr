@@ -9,7 +9,6 @@ const navTemplate = `
 	align-items: center;
 	background: #fff;
 	color: #0a0a0a;
-	border-bottom: 1px solid black;
 	display: flex;
 	left: 0;
   padding: 32px 24px;

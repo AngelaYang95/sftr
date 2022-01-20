@@ -68,8 +68,6 @@ section.hero {
 }
 
 footer {
-	border-bottom: 1px solid $bodyColor;
-	border-top: 1px solid $bodyColor;
 	background-color: $backgroundColor;
 	color: $headerColor;
 	display: flex;
@@ -177,13 +175,14 @@ p.caption {
 }
 
 .socials li {
+	color: $headerColor;
+	font-size: 26px;
 	list-style: none;
 	text-transform: uppercase;
 }
 
 .signature {
   align-items: center;
-  border-left: 1px solid $borderColor;
   display: flex;
   font-size: 16px;
   padding-left: 40px;
@@ -211,6 +210,11 @@ footer.fixed {
 
 	.nav-items li {
 		display: block;
+	}
+
+	section section {
+		margin: 0 auto;
+		padding: 0;
 	}
 
 	section {
